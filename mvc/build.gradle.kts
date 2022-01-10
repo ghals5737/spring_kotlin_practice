@@ -5,6 +5,7 @@ plugins {
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     kotlin("jvm") version "1.6.0"
     kotlin("plugin.spring") version "1.6.0"
+    kotlin("plugin.jpa") version "1.6.0"
 }
 
 group = "com.example"
@@ -32,12 +33,18 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-params:5.5.2")
     // https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher
     testImplementation("org.junit.platform:junit-platform-launcher:1.8.1")
+    // https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client
+    implementation("org.mariadb.jdbc:mariadb-java-client:2.7.3")
+
 
     implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
     implementation("org.projectlombok:lombok")
     implementation("io.springfox:springfox-swagger-ui:2.9.2")
     implementation("io.springfox:springfox-swagger2:2.9.2")
     implementation("org.springframework.boot:spring-boot-starter-validation")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa") // <-- 추가됨
+    implementation("org.springframework.boot:spring-boot-starter-jdbc")     // <-- 추가됨
+    implementation("mysql:mysql-connector-java")
 }
 
 tasks.withType<KotlinCompile> {
