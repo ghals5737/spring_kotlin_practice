@@ -1,4 +1,4 @@
-package com.example.mvc.dto
+package com.example.mvc.entity
 
 import java.util.*
 import javax.persistence.*

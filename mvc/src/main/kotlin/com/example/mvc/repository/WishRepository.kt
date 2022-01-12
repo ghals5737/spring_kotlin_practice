@@ -1,6 +1,6 @@
 package com.example.mvc.repository
 
-import com.example.mvc.dto.Wish
+import com.example.mvc.entity.Wish
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 import org.springframework.transaction.annotation.Transactional

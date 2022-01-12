@@ -1,6 +1,6 @@
 package com.example.mvc.repository
 
-import com.example.mvc.dto.Wish
+import com.example.mvc.entity.Wish
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
