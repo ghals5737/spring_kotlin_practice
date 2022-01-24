@@ -39,12 +39,13 @@ dependencies {
 
     implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
     implementation("org.projectlombok:lombok")
-    implementation("io.springfox:springfox-swagger-ui:2.9.2")
-    implementation("io.springfox:springfox-swagger2:2.9.2")
+    implementation("io.springfox:springfox-swagger-ui:3.0.0")
+    implementation("io.springfox:springfox-boot-starter:3.0.0")
     implementation("org.springframework.boot:spring-boot-starter-validation")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa") // <-- 추가됨
     implementation("org.springframework.boot:spring-boot-starter-jdbc")     // <-- 추가됨
     implementation("mysql:mysql-connector-java")
+
 }
 
 tasks.withType<KotlinCompile> {

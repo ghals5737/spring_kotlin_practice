@@ -7,7 +7,6 @@ data class SearchLocalRes (
     var total:Int,
     var start:Int,
     var display:Int,
-    var category: String?,
     var items:List<SearchLocalItem>
 
 ){
@@ -15,6 +14,7 @@ data class SearchLocalRes (
         var title:String,
         var link:String,
         var description:String,
+        var category: String?,
         var telephone:String,
         var address:String,
         var roadAddress:String,

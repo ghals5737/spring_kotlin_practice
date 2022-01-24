@@ -21,8 +21,8 @@ class WishService(
         if(searchLocalRes?.total!! >0){
             var item=searchLocalRes.items.first()
 
-            var itemQuery=item.title.replace("<[^>]*>","")
-            var searchImageReq=SearchImageReq()
+            var itemQuery=item.title.replace("<[^>]*>".toRegex(),"")
+            var searchImageReq=SearchImageReq(itemQuery)
 
             var searchImageRes=naverClient.searchImage(searchImageReq)
 
@@ -31,7 +31,7 @@ class WishService(
 
                 var result=WishDto().apply {
                     this.title=item.title
-                    this.category= searchLocalRes.category
+                    this.category= item.category
                     this.address=item.address
                     this.readAddress=item.roadAddress
                     this.homePageLink=item.link
